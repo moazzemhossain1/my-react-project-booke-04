@@ -30,7 +30,7 @@ const NaveBer = () => {
                        <div className='flex gap-4'> {Links}</div>
                     </ul>
                 </div>
-                <a className="font-bold text-[28px] ml-5">fs</a>
+                <a className="font-bold text-[28px] ml-12">fs</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -39,7 +39,7 @@ const NaveBer = () => {
             </div>
             <div className="navbar-end">
                 <button className="btn mr-5 font-semibold text-[18px] text-[#FFFFFF] bg-[#23BE0A]">Sign In</button>
-                <button className='btn mr-5 font-semibold text-[18px] text-[#FFFFFF] bg-[#59C6D2]'>Sign Up</button>
+                <button className='btn mr-12 font-semibold text-[18px] text-[#FFFFFF] bg-[#59C6D2]'>Sign Up</button>
 
             </div>
             </div>

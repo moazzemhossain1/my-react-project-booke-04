@@ -7,6 +7,7 @@ import Roots from './Roots/Roots';
 import Home from './pages/Home/Home';
 import Books from './pages/books/Books';
 import ReadePage from './pages/ReadePage/ReadePage';
+import ErrorePage from './pages/Errore/ErrorePage';
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,8 @@ const router = createBrowserRouter([
         path:"reade",
         Component:ReadePage,
       }
-    ]
+    ],
+    errorElement:<ErrorePage></ErrorePage>
   },
 ]);
 
