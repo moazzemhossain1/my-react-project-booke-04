@@ -8,6 +8,7 @@ import Home from './pages/Home/Home';
 import Books from './pages/books/Books';
 import ReadePage from './pages/ReadePage/ReadePage';
 import ErrorePage from './pages/Errore/ErrorePage';
+import SingleBokDitles from './pages/singleBokeDitles/singleBokDitles';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,18 @@ const router = createBrowserRouter([
       {
         path:"reade",
         Component:ReadePage,
+      },
+      {
+        path:"bokeDitles/:id",
+        loader:async ({params }) =>{
+          const res=await fetch('/booksData.json');
+          const data=await res.json();
+          console.log("moazzem ",data);
+            const singleData = data.find(book => book.bookId == Number(params.id));
+   
+        return singleData;
+        },
+        Component:SingleBokDitles,
       }
     ],
     errorElement:<ErrorePage></ErrorePage>

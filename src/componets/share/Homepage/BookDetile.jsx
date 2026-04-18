@@ -1,10 +1,12 @@
 import React from 'react';
 import taraImage from '../../../assets/tara.png'
+import { Link } from 'react-router';
 
 const BookDetile = ({ book }) => {
     const { bookName, image ,author,rating,category} = book;
     return (
-        <div className=' '>
+        <Link to={`/bokeDitles/${book.bookId}`} className=' '>
+           
             <div className="card bg-base-100  shadow-xl border-2 rounded-2xl">
                 <figure className='p-5 m-5 bg-[#F3F3F3] rounded-2xl'>
                     <img
@@ -27,7 +29,7 @@ const BookDetile = ({ book }) => {
                         <div className="flex gap-1 m-2.5 btn"><img src={taraImage}></img>{rating}</div>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 };
 
